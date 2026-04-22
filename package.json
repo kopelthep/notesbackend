@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "0.0.1",
   "description": "",
-  "license": "ARR",
+  "license": "ISC",
   "author": "Paul BOULESTEIX",
   "type": "commonjs",
   "main": "index.js",
