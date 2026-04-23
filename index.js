@@ -60,23 +60,9 @@ app.get('/api/notes', (request, response) => {
 
 
 
-app.get('/api/notes/:id', (request, response) => {
-    //console.log("Params requested by",request.params)
-    const id = request.params.id
-    const note = notes.find(note => note.id === id)
-    if (note) {
-    response.json(note)
-    } else {
-    response.status(404).end()
-    }
-})
 
-const generateId = () => {
-  const maxId = notes.length > 0
-    ? Math.max(...notes.map(n => Number(n.id)))
-    : 0
-  return String(maxId + 1)
-}
+
+
 
 
 app.post('/api/notes', (request, response) => {
