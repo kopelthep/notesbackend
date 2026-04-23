@@ -105,8 +105,10 @@ app.post('/api/notes', (request, response) => {
 
 app.delete('/api/notes/:id', (request, response) => {
     const id = request.params.id
-    notes = notes.filter(note => note.id !== id)
-    response.status(204).end()
+    Note.findById(id).then(note => {
+      response.json(note)
+    })
+    
 })
 
 
